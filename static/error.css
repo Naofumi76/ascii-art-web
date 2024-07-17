@@ -1,0 +1,15 @@
+body {
+    background-color: #333333;
+}
+
+h1 {
+    color:#d84e36;
+    text-align: center;
+    margin: auto;
+}
+
+p{
+    color:rgb(165, 74, 250);
+    margin-top: 50px;
+    text-align: center;
+}

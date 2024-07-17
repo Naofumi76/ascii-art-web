@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="red">ASCII-Art-Web</h1>
+        <p>Only <b class="green">valid ASCII characters</b> should be used! <b class="red">Beware</b>, if you don't respect this rule...</p>
+        
+        <form method="post" action="/">
+            <textarea cols="60" rows="15" name="send_value" id="userInput" placeholder="Enter your input here..." required></textarea>
+            <br><br>
+            <p>Change the <b class="green">banner</b> of the result just below!</p>
+            <select id="template" name="options">
+                <option value="standard">standard</option>
+                <option value="shadow">shadow</option>
+                <option value="thinkertoy">thinkertoy</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit" class="submitButton">
+        </form>
+        {{ if .Resultat }}
+            <br>
+            <p><b class="green">Result :</b></p>
+            <pre name="result">{{ .Resultat }}</pre>
+            <p>Download the <b class="green">ASCII art</b> here:</p>
+            <a href="/download?text={{ .Resultat }}" download="ascii-art.txt">
+            <button type="button" class="download-link">Download</button>
+            </a>
+        {{ end }}
+    </div>
+</body>
+</html>
