@@ -13,7 +13,7 @@ This is a simple web application written in Go that converts user input text int
 
 ## Requirements
 
--   Go 1.16 or later
+-   Go 1.22.4 or later
 
 ## Installation
 
